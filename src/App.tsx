@@ -27,13 +27,13 @@ const MyContext = createContext();
 function App() {
 
   const [productData, setProductData] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems]:any = useState([]);
   const [isLoading, setIsloading] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const [isopenNavigation, setIsopenNavigation] = useState(false);
 
-  const [isLogin, setIsLogin] = useState();
+  const [isLogin, setIsLogin]:any = useState();
   const [isOpenFilters, setIsopenFilters] = useState(false);
   const [cartTotalAmount, setCartTotalAmount] = useState();
   const [prodData, setProdData] = useState([])
@@ -175,15 +175,15 @@ function App() {
 
         <Header data={data.productData} />
         <Routes>
-          <Route exact={true} path="/" element={<Home data={prodData} data1={data.productData} />} />
-          <Route exact={true} path="/cat/:id" element={<Listing data={data.productData} single={true} />} />
-          <Route exact={true} path="/cat/:id/:id" element={<Listing data={data.productData} single={false} />} />
-          <Route exact={true} path="/product/:id" element={<DetailsPage data={data.productData} />} />
-          <Route exact={true} path="/cart" element={<Cart />} />
-          <Route exact={true} path="/signIn" element={<SignIn />} />
-          <Route exact={true} path="/signUp" element={<SignUp />} />
-          <Route exact={true} path="/checkout" element={<Checkout />} />
-          <Route exact={true} path="*" element={<NotFound />} />
+          <Route  path="/" element={<Home data={prodData} data1={data.productData} />} />
+          <Route  path="/cat/:id" element={<Listing data={data.productData} single={true} />} />
+          <Route  path="/cat/:id/:id" element={<Listing data={data.productData} single={false} />} />
+          <Route  path="/product/:id" element={<DetailsPage data={data.productData} />} />
+          <Route  path="/cart" element={<Cart />} />
+          <Route path="/signIn" element={<SignIn />} />
+          <Route  path="/signUp" element={<SignUp />} />
+          <Route  path="/checkout" element={<Checkout />} />
+          <Route  path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </MyContext.Provider>

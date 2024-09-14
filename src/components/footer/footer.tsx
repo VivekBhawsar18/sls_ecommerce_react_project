@@ -20,7 +20,7 @@ import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import Newsletter from '../../components/newsletter/index';
+import Newsletter from '../newsletter/index';
 import NewsletterImg from '../../assets/images/newsletter.png';
 
 const Footer = () => {
